@@ -41,8 +41,8 @@ class MorseSynthConfigDialog(wx.Dialog):
 		sHelper.addDialogDismissButtons(self.CreateButtonSizer(wx.OK | wx.CANCEL))
 		
 		mainSizer.Add(sHelper.sizer, border=gui.guiHelper.BORDER_FOR_DIALOGS, flag=wx.ALL)
-		mainSizer.Fit(self)
 		self.SetSizer(mainSizer)
+		mainSizer.Fit(self)
 		self.CentreOnScreen()
 
 	def save(self):

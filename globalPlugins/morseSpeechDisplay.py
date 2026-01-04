@@ -82,8 +82,8 @@ class MorseSpeechDisplayDialog(wx.Dialog):
 		sHelper.addItem(bHelper)
 		
 		mainSizer.Add(sHelper.sizer, border=gui.guiHelper.BORDER_FOR_DIALOGS, flag=wx.ALL, proportion=1)
-		mainSizer.Fit(self)
 		self.SetSizer(mainSizer)
+		mainSizer.Fit(self)
 		self.CentreOnScreen()
 
 	def onCopy(self, evt):
