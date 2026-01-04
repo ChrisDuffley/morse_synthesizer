@@ -20,7 +20,7 @@ class MorseSynthConfigDialog(wx.Dialog):
 		self._settings = config.conf["morseSynth"]
 		wpm = int(self._settings.get('wpm', 15))
 		freq = int(self._settings.get('freq', 440))
-		farnsworth = float(self._settings.get('farnsworth', 1.0))
+		farnsworth = self._settings.get('farnsworth', 1.0)
 		
 		mainSizer = wx.BoxSizer(wx.VERTICAL)
 		sHelper = gui.guiHelper.BoxSizerHelper(self, orientation=wx.VERTICAL)
