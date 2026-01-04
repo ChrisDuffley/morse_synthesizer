@@ -34,9 +34,15 @@ class MorseSynthConfigDialog(wx.Dialog):
 		self.freqEdit.SetValue(freq)
 		
 		# Farnsworth-Faktor
-		self.farnsworthEdit = sHelper.addLabeledControl(_("Farnsworth:"), wx.SpinCtrlDouble, min=0.5, max=3.0, inc=0.1)
+		self.farnsworthEdit = sHelper.addLabeledControl(
+				_("Farnsworth:"),
+				wx.SpinCtrlDouble,
+				min=0.5,
+				max=3.0,
+				initial=farnsworth,
+				inc=0.1
+		)
 		self.farnsworthEdit.SetDigits(1)
-		self.farnsworthEdit.SetValue(farnsworth)
 		
 		sHelper.addDialogDismissButtons(self.CreateButtonSizer(wx.OK | wx.CANCEL))
 		
